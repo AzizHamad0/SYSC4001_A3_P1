@@ -1,0 +1,80 @@
++------------------------------------------------+
+|Time of Transition |PID | Old State | New State |
++------------------------------------------------+
+|                 0 |  1 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 10Mb
+ free memory: 90Mb
+ free partitions: 90Mb
+------------------
+
+|                 0 |  2 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): PID 2 using 10Mb
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 20Mb
+ free memory: 80Mb
+ free partitions: 75Mb
+------------------
+
+|                 0 |  3 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): PID 3 using 10Mb
+Partition 3 (15Mb): PID 2 using 10Mb
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 30Mb
+ free memory: 70Mb
+ free partitions: 50Mb
+------------------
+
+|                 0 |  4 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): PID 4 using 10Mb
+Partition 2 (25Mb): PID 3 using 10Mb
+Partition 3 (15Mb): PID 2 using 10Mb
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 40Mb
+ free memory: 60Mb
+ free partitions: 10Mb
+------------------
+
+|                 0 |  4 |     READY |   RUNNING |
+|               100 |  4 |   RUNNING |     READY |
+|               100 |  4 |     READY |   RUNNING |
+|               150 |  4 |   RUNNING |TERMINATED |
+|               150 |  3 |     READY |   RUNNING |
+|               250 |  3 |   RUNNING |     READY |
+|               250 |  3 |     READY |   RUNNING |
+|               350 |  3 |   RUNNING |TERMINATED |
+|               350 |  2 |     READY |   RUNNING |
+|               450 |  2 |   RUNNING |     READY |
+|               450 |  2 |     READY |   RUNNING |
+|               550 |  2 |   RUNNING |     READY |
+|               550 |  2 |     READY |   RUNNING |
+|               600 |  2 |   RUNNING |TERMINATED |
+|               600 |  1 |     READY |   RUNNING |
+|               700 |  1 |   RUNNING |     READY |
+|               700 |  1 |     READY |   RUNNING |
+|               800 |  1 |   RUNNING |     READY |
+|               800 |  1 |     READY |   RUNNING |
+|               900 |  1 |   RUNNING |TERMINATED |
++------------------------------------------------+

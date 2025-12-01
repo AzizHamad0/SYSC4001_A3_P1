@@ -1,0 +1,443 @@
++------------------------------------------------+
+|Time of Transition |PID | Old State | New State |
++------------------------------------------------+
+|                 0 |  1 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 5Mb
+free memory: 95Mb
+free partitions: 92Mb
+-------------------
+
+|                 0 |  1 |     READY |   RUNNING |
+|                 5 |  1 |   RUNNING |   WAITING |
+|                10 |  2 |       NEW |     READY |
+
+ memory status at time 10 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): PID 2 using 8Mb
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 13Mb
+free memory: 87Mb
+free partitions: 82Mb
+-------------------
+
+|                10 |  2 |     READY |   RUNNING |
+|                14 |  2 |   RUNNING |   WAITING |
+|                15 |  1 |   WAITING |     READY |
+|                15 |  1 |     READY |   RUNNING |
+|                20 |  1 |   RUNNING |   WAITING |
+|                20 |  3 |       NEW |     READY |
+
+ memory status at time 20 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): PID 2 using 8Mb
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): PID 3 using 2Mb
+memory used: 15Mb
+free memory: 85Mb
+free partitions: 80Mb
+-------------------
+
+|                20 |  3 |     READY |   RUNNING |
+|                22 |  3 |   RUNNING |   WAITING |
+|                30 |  1 |   WAITING |     READY |
+|                30 |  1 |     READY |   RUNNING |
+|                34 |  2 |   WAITING |     READY |
+|                35 |  1 |   RUNNING |   WAITING |
+|                35 |  2 |     READY |   RUNNING |
+|                37 |  3 |   WAITING |     READY |
+|                39 |  2 |   RUNNING |   WAITING |
+|                39 |  3 |     READY |   RUNNING |
+|                41 |  3 |   RUNNING |   WAITING |
+|                45 |  1 |   WAITING |     READY |
+|                45 |  1 |     READY |   RUNNING |
+|                50 |  1 |   RUNNING |   WAITING |
+|                56 |  3 |   WAITING |     READY |
+|                56 |  3 |     READY |   RUNNING |
+|                58 |  3 |   RUNNING |   WAITING |
+|                59 |  2 |   WAITING |     READY |
+|                59 |  2 |     READY |   RUNNING |
+|                60 |  1 |   WAITING |     READY |
+|                61 |  2 |   RUNNING |     READY |
+|                61 |  1 |     READY |   RUNNING |
+|                66 |  1 |   RUNNING |   WAITING |
+|                66 |  2 |     READY |   RUNNING |
+|                68 |  2 |   RUNNING |   WAITING |
+|                73 |  3 |   WAITING |     READY |
+|                73 |  3 |     READY |   RUNNING |
+|                75 |  3 |   RUNNING |   WAITING |
+|                76 |  1 |   WAITING |     READY |
+|                76 |  1 |     READY |   RUNNING |
+|                81 |  1 |   RUNNING |   WAITING |
+|                88 |  2 |   WAITING |     READY |
+|                88 |  2 |     READY |   RUNNING |
+|                90 |  3 |   WAITING |     READY |
+|                91 |  1 |   WAITING |     READY |
+|                92 |  2 |   RUNNING |   WAITING |
+|                92 |  1 |     READY |   RUNNING |
+|                97 |  1 |   RUNNING |   WAITING |
+|                97 |  3 |     READY |   RUNNING |
+|                99 |  3 |   RUNNING |   WAITING |
+|               107 |  1 |   WAITING |     READY |
+|               107 |  1 |     READY |   RUNNING |
+|               112 |  1 |   RUNNING |   WAITING |
+|               112 |  2 |   WAITING |     READY |
+|               112 |  2 |     READY |   RUNNING |
+|               114 |  3 |   WAITING |     READY |
+|               116 |  2 |   RUNNING |   WAITING |
+|               116 |  3 |     READY |   RUNNING |
+|               118 |  3 |   RUNNING |   WAITING |
+|               122 |  1 |   WAITING |     READY |
+|               122 |  1 |     READY |   RUNNING |
+|               127 |  1 |   RUNNING |   WAITING |
+|               133 |  3 |   WAITING |     READY |
+|               133 |  3 |     READY |   RUNNING |
+|               135 |  3 |   RUNNING |   WAITING |
+|               136 |  2 |   WAITING |     READY |
+|               136 |  2 |     READY |   RUNNING |
+|               137 |  1 |   WAITING |     READY |
+|               138 |  2 |   RUNNING |     READY |
+|               138 |  1 |     READY |   RUNNING |
+|               143 |  1 |   RUNNING |   WAITING |
+|               143 |  2 |     READY |   RUNNING |
+|               145 |  2 |   RUNNING |   WAITING |
+|               150 |  3 |   WAITING |     READY |
+|               150 |  3 |     READY |   RUNNING |
+|               152 |  3 |   RUNNING |   WAITING |
+|               153 |  1 |   WAITING |     READY |
+|               153 |  1 |     READY |   RUNNING |
+|               158 |  1 |   RUNNING |   WAITING |
+|               165 |  2 |   WAITING |     READY |
+|               165 |  2 |     READY |   RUNNING |
+|               167 |  3 |   WAITING |     READY |
+|               168 |  1 |   WAITING |     READY |
+|               169 |  2 |   RUNNING |   WAITING |
+|               169 |  1 |     READY |   RUNNING |
+|               174 |  1 |   RUNNING |   WAITING |
+|               174 |  3 |     READY |   RUNNING |
+|               176 |  3 |   RUNNING |   WAITING |
+|               184 |  1 |   WAITING |     READY |
+|               184 |  1 |     READY |   RUNNING |
+|               189 |  1 |   RUNNING |   WAITING |
+|               189 |  2 |   WAITING |     READY |
+|               189 |  2 |     READY |   RUNNING |
+|               191 |  3 |   WAITING |     READY |
+|               193 |  2 |   RUNNING |   WAITING |
+|               193 |  3 |     READY |   RUNNING |
+|               195 |  3 |   RUNNING |   WAITING |
+|               199 |  1 |   WAITING |     READY |
+|               199 |  1 |     READY |   RUNNING |
+|               204 |  1 |   RUNNING |   WAITING |
+|               210 |  3 |   WAITING |     READY |
+|               210 |  3 |     READY |   RUNNING |
+|               212 |  3 |   RUNNING |   WAITING |
+|               213 |  2 |   WAITING |     READY |
+|               213 |  2 |     READY |   RUNNING |
+|               214 |  1 |   WAITING |     READY |
+|               215 |  2 |   RUNNING |     READY |
+|               215 |  1 |     READY |   RUNNING |
+|               220 |  1 |   RUNNING |   WAITING |
+|               220 |  2 |     READY |   RUNNING |
+|               222 |  2 |   RUNNING |   WAITING |
+|               227 |  3 |   WAITING |     READY |
+|               227 |  3 |     READY |   RUNNING |
+|               229 |  3 |   RUNNING |   WAITING |
+|               230 |  1 |   WAITING |     READY |
+|               230 |  1 |     READY |   RUNNING |
+|               235 |  1 |   RUNNING |   WAITING |
+|               242 |  2 |   WAITING |     READY |
+|               242 |  2 |     READY |   RUNNING |
+|               244 |  3 |   WAITING |     READY |
+|               245 |  1 |   WAITING |     READY |
+|               246 |  2 |   RUNNING |   WAITING |
+|               246 |  1 |     READY |   RUNNING |
+|               251 |  1 |   RUNNING |   WAITING |
+|               251 |  3 |     READY |   RUNNING |
+|               253 |  3 |   RUNNING |   WAITING |
+|               261 |  1 |   WAITING |     READY |
+|               261 |  1 |     READY |   RUNNING |
+|               266 |  1 |   RUNNING |   WAITING |
+|               266 |  2 |   WAITING |     READY |
+|               266 |  2 |     READY |   RUNNING |
+|               268 |  3 |   WAITING |     READY |
+|               270 |  2 |   RUNNING |   WAITING |
+|               270 |  3 |     READY |   RUNNING |
+|               272 |  3 |   RUNNING |   WAITING |
+|               276 |  1 |   WAITING |     READY |
+|               276 |  1 |     READY |   RUNNING |
+|               281 |  1 |   RUNNING |   WAITING |
+|               287 |  3 |   WAITING |     READY |
+|               287 |  3 |     READY |   RUNNING |
+|               289 |  3 |   RUNNING |   WAITING |
+|               290 |  2 |   WAITING |     READY |
+|               290 |  2 |     READY |   RUNNING |
+|               291 |  1 |   WAITING |     READY |
+|               292 |  2 |   RUNNING |     READY |
+|               292 |  1 |     READY |   RUNNING |
+|               297 |  1 |   RUNNING |   WAITING |
+|               297 |  2 |     READY |   RUNNING |
+|               299 |  2 |   RUNNING |   WAITING |
+|               304 |  3 |   WAITING |     READY |
+|               304 |  3 |     READY |   RUNNING |
+|               306 |  3 |   RUNNING |   WAITING |
+|               307 |  1 |   WAITING |     READY |
+|               307 |  1 |     READY |   RUNNING |
+|               312 |  1 |   RUNNING |   WAITING |
+|               319 |  2 |   WAITING |     READY |
+|               319 |  2 |     READY |   RUNNING |
+|               321 |  3 |   WAITING |     READY |
+|               322 |  1 |   WAITING |     READY |
+|               323 |  2 |   RUNNING |   WAITING |
+|               323 |  1 |     READY |   RUNNING |
+|               328 |  1 |   RUNNING |   WAITING |
+|               328 |  3 |     READY |   RUNNING |
+|               330 |  3 |   RUNNING |   WAITING |
+|               338 |  1 |   WAITING |     READY |
+|               338 |  1 |     READY |   RUNNING |
+|               343 |  1 |   RUNNING |   WAITING |
+|               343 |  2 |   WAITING |     READY |
+|               343 |  2 |     READY |   RUNNING |
+|               345 |  3 |   WAITING |     READY |
+|               347 |  2 |   RUNNING |   WAITING |
+|               347 |  3 |     READY |   RUNNING |
+|               349 |  3 |   RUNNING |   WAITING |
+|               353 |  1 |   WAITING |     READY |
+|               353 |  1 |     READY |   RUNNING |
+|               358 |  1 |   RUNNING |   WAITING |
+|               364 |  3 |   WAITING |     READY |
+|               364 |  3 |     READY |   RUNNING |
+|               366 |  3 |   RUNNING |   WAITING |
+|               367 |  2 |   WAITING |     READY |
+|               367 |  2 |     READY |   RUNNING |
+|               368 |  1 |   WAITING |     READY |
+|               369 |  2 |   RUNNING |     READY |
+|               369 |  1 |     READY |   RUNNING |
+|               374 |  1 |   RUNNING |   WAITING |
+|               374 |  2 |     READY |   RUNNING |
+|               376 |  2 |   RUNNING |   WAITING |
+|               381 |  3 |   WAITING |     READY |
+|               381 |  3 |     READY |   RUNNING |
+|               383 |  3 |   RUNNING |   WAITING |
+|               384 |  1 |   WAITING |     READY |
+|               384 |  1 |     READY |   RUNNING |
+|               389 |  1 |   RUNNING |   WAITING |
+|               396 |  2 |   WAITING |     READY |
+|               396 |  2 |     READY |   RUNNING |
+|               398 |  3 |   WAITING |     READY |
+|               399 |  1 |   WAITING |     READY |
+|               400 |  2 |   RUNNING |   WAITING |
+|               400 |  1 |     READY |   RUNNING |
+|               405 |  1 |   RUNNING |   WAITING |
+|               405 |  3 |     READY |   RUNNING |
+|               407 |  3 |   RUNNING |   WAITING |
+|               415 |  1 |   WAITING |     READY |
+|               415 |  1 |     READY |   RUNNING |
+|               420 |  1 |   RUNNING |   WAITING |
+|               420 |  2 |   WAITING |     READY |
+|               420 |  2 |     READY |   RUNNING |
+|               422 |  3 |   WAITING |     READY |
+|               424 |  2 |   RUNNING |   WAITING |
+|               424 |  3 |     READY |   RUNNING |
+|               426 |  3 |   RUNNING |   WAITING |
+|               430 |  1 |   WAITING |     READY |
+|               430 |  1 |     READY |   RUNNING |
+|               435 |  1 |   RUNNING |   WAITING |
+|               441 |  3 |   WAITING |     READY |
+|               441 |  3 |     READY |   RUNNING |
+|               443 |  3 |   RUNNING |   WAITING |
+|               444 |  2 |   WAITING |     READY |
+|               444 |  2 |     READY |   RUNNING |
+|               445 |  1 |   WAITING |     READY |
+|               446 |  2 |   RUNNING |     READY |
+|               446 |  1 |     READY |   RUNNING |
+|               451 |  1 |   RUNNING |   WAITING |
+|               451 |  2 |     READY |   RUNNING |
+|               453 |  2 |   RUNNING |   WAITING |
+|               458 |  3 |   WAITING |     READY |
+|               458 |  3 |     READY |   RUNNING |
+|               460 |  3 |   RUNNING |   WAITING |
+|               461 |  1 |   WAITING |     READY |
+|               461 |  1 |     READY |   RUNNING |
+|               466 |  1 |   RUNNING |   WAITING |
+|               473 |  2 |   WAITING |     READY |
+|               473 |  2 |     READY |   RUNNING |
+|               475 |  3 |   WAITING |     READY |
+|               476 |  1 |   WAITING |     READY |
+|               477 |  2 |   RUNNING |   WAITING |
+|               477 |  1 |     READY |   RUNNING |
+|               482 |  1 |   RUNNING |   WAITING |
+|               482 |  3 |     READY |   RUNNING |
+|               484 |  3 |   RUNNING |   WAITING |
+|               492 |  1 |   WAITING |     READY |
+|               492 |  1 |     READY |   RUNNING |
+|               497 |  1 |   RUNNING |   WAITING |
+|               497 |  2 |   WAITING |     READY |
+|               497 |  2 |     READY |   RUNNING |
+|               499 |  3 |   WAITING |     READY |
+|               501 |  2 |   RUNNING |   WAITING |
+|               501 |  3 |     READY |   RUNNING |
+|               503 |  3 |   RUNNING |   WAITING |
+|               507 |  1 |   WAITING |     READY |
+|               507 |  1 |     READY |   RUNNING |
+|               512 |  1 |   RUNNING |   WAITING |
+|               518 |  3 |   WAITING |     READY |
+|               518 |  3 |     READY |   RUNNING |
+|               520 |  3 |   RUNNING |   WAITING |
+|               521 |  2 |   WAITING |     READY |
+|               521 |  2 |     READY |   RUNNING |
+|               522 |  1 |   WAITING |     READY |
+|               523 |  2 |   RUNNING |     READY |
+|               523 |  1 |     READY |   RUNNING |
+|               528 |  1 |   RUNNING |   WAITING |
+|               528 |  2 |     READY |   RUNNING |
+|               530 |  2 |   RUNNING |   WAITING |
+|               535 |  3 |   WAITING |     READY |
+|               535 |  3 |     READY |   RUNNING |
+|               537 |  3 |   RUNNING |   WAITING |
+|               538 |  1 |   WAITING |     READY |
+|               538 |  1 |     READY |   RUNNING |
+|               543 |  1 |   RUNNING |   WAITING |
+|               550 |  2 |   WAITING |     READY |
+|               550 |  2 |     READY |   RUNNING |
+|               552 |  3 |   WAITING |     READY |
+|               553 |  1 |   WAITING |     READY |
+|               554 |  2 |   RUNNING |   WAITING |
+|               554 |  1 |     READY |   RUNNING |
+|               559 |  1 |   RUNNING |   WAITING |
+|               559 |  3 |     READY |   RUNNING |
+|               561 |  3 |   RUNNING |   WAITING |
+|               569 |  1 |   WAITING |     READY |
+|               569 |  1 |     READY |   RUNNING |
+|               574 |  1 |   RUNNING |   WAITING |
+|               574 |  2 |   WAITING |     READY |
+|               574 |  2 |     READY |   RUNNING |
+|               576 |  3 |   WAITING |     READY |
+|               578 |  2 |   RUNNING |   WAITING |
+|               578 |  3 |     READY |   RUNNING |
+|               580 |  3 |   RUNNING |   WAITING |
+|               584 |  1 |   WAITING |     READY |
+|               584 |  1 |     READY |   RUNNING |
+|               589 |  1 |   RUNNING |   WAITING |
+|               595 |  3 |   WAITING |     READY |
+|               595 |  3 |     READY |   RUNNING |
+|               597 |  3 |   RUNNING |   WAITING |
+|               598 |  2 |   WAITING |     READY |
+|               598 |  2 |     READY |   RUNNING |
+|               599 |  1 |   WAITING |     READY |
+|               600 |  2 |   RUNNING |     READY |
+|               600 |  1 |     READY |   RUNNING |
+|               605 |  1 |   RUNNING |TERMINATED |
+|               605 |  2 |     READY |   RUNNING |
+|               607 |  2 |   RUNNING |   WAITING |
+|               612 |  3 |   WAITING |     READY |
+|               612 |  3 |     READY |   RUNNING |
+|               614 |  3 |   RUNNING |   WAITING |
+|               627 |  2 |   WAITING |     READY |
+|               627 |  2 |     READY |   RUNNING |
+|               629 |  3 |   WAITING |     READY |
+|               631 |  2 |   RUNNING |   WAITING |
+|               631 |  3 |     READY |   RUNNING |
+|               633 |  3 |   RUNNING |   WAITING |
+|               648 |  3 |   WAITING |     READY |
+|               648 |  3 |     READY |   RUNNING |
+|               650 |  3 |   RUNNING |   WAITING |
+|               651 |  2 |   WAITING |     READY |
+|               651 |  2 |     READY |   RUNNING |
+|               655 |  2 |   RUNNING |   WAITING |
+|               665 |  3 |   WAITING |     READY |
+|               665 |  3 |     READY |   RUNNING |
+|               667 |  3 |   RUNNING |   WAITING |
+|               675 |  2 |   WAITING |     READY |
+|               675 |  2 |     READY |   RUNNING |
+|               679 |  2 |   RUNNING |   WAITING |
+|               682 |  3 |   WAITING |     READY |
+|               682 |  3 |     READY |   RUNNING |
+|               684 |  3 |   RUNNING |   WAITING |
+|               699 |  2 |   WAITING |     READY |
+|               699 |  3 |   WAITING |     READY |
+|               699 |  2 |     READY |   RUNNING |
+|               703 |  2 |   RUNNING |   WAITING |
+|               703 |  3 |     READY |   RUNNING |
+|               705 |  3 |   RUNNING |   WAITING |
+|               720 |  3 |   WAITING |     READY |
+|               720 |  3 |     READY |   RUNNING |
+|               722 |  3 |   RUNNING |   WAITING |
+|               723 |  2 |   WAITING |     READY |
+|               723 |  2 |     READY |   RUNNING |
+|               727 |  2 |   RUNNING |   WAITING |
+|               737 |  3 |   WAITING |     READY |
+|               737 |  3 |     READY |   RUNNING |
+|               739 |  3 |   RUNNING |   WAITING |
+|               747 |  2 |   WAITING |     READY |
+|               747 |  2 |     READY |   RUNNING |
+|               751 |  2 |   RUNNING |   WAITING |
+|               754 |  3 |   WAITING |     READY |
+|               754 |  3 |     READY |   RUNNING |
+|               756 |  3 |   RUNNING |   WAITING |
+|               771 |  2 |   WAITING |     READY |
+|               771 |  3 |   WAITING |     READY |
+|               771 |  2 |     READY |   RUNNING |
+|               775 |  2 |   RUNNING |   WAITING |
+|               775 |  3 |     READY |   RUNNING |
+|               777 |  3 |   RUNNING |   WAITING |
+|               792 |  3 |   WAITING |     READY |
+|               792 |  3 |     READY |   RUNNING |
+|               794 |  3 |   RUNNING |   WAITING |
+|               795 |  2 |   WAITING |     READY |
+|               795 |  2 |     READY |   RUNNING |
+|               799 |  2 |   RUNNING |   WAITING |
+|               809 |  3 |   WAITING |     READY |
+|               809 |  3 |     READY |   RUNNING |
+|               811 |  3 |   RUNNING |   WAITING |
+|               819 |  2 |   WAITING |     READY |
+|               819 |  2 |     READY |   RUNNING |
+|               823 |  2 |   RUNNING |   WAITING |
+|               826 |  3 |   WAITING |     READY |
+|               826 |  3 |     READY |   RUNNING |
+|               828 |  3 |   RUNNING |   WAITING |
+|               843 |  2 |   WAITING |     READY |
+|               843 |  3 |   WAITING |     READY |
+|               843 |  2 |     READY |   RUNNING |
+|               847 |  2 |   RUNNING |   WAITING |
+|               847 |  3 |     READY |   RUNNING |
+|               849 |  3 |   RUNNING |   WAITING |
+|               864 |  3 |   WAITING |     READY |
+|               864 |  3 |     READY |   RUNNING |
+|               866 |  3 |   RUNNING |   WAITING |
+|               867 |  2 |   WAITING |     READY |
+|               867 |  2 |     READY |   RUNNING |
+|               871 |  2 |   RUNNING |   WAITING |
+|               881 |  3 |   WAITING |     READY |
+|               881 |  3 |     READY |   RUNNING |
+|               883 |  3 |   RUNNING |   WAITING |
+|               891 |  2 |   WAITING |     READY |
+|               891 |  2 |     READY |   RUNNING |
+|               895 |  2 |   RUNNING |   WAITING |
+|               898 |  3 |   WAITING |     READY |
+|               898 |  3 |     READY |   RUNNING |
+|               900 |  3 |   RUNNING |   WAITING |
+|               915 |  2 |   WAITING |     READY |
+|               915 |  3 |   WAITING |     READY |
+|               915 |  2 |     READY |   RUNNING |
+|               919 |  2 |   RUNNING |   WAITING |
+|               919 |  3 |     READY |   RUNNING |
+|               921 |  3 |   RUNNING |   WAITING |
+|               936 |  3 |   WAITING |     READY |
+|               936 |  3 |     READY |   RUNNING |
+|               938 |  3 |   RUNNING |TERMINATED |
+|               939 |  2 |   WAITING |     READY |
+|               939 |  2 |     READY |   RUNNING |
+|               941 |  2 |   RUNNING |TERMINATED |
++------------------------------------------------+
