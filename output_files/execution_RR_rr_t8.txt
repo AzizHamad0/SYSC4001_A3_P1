@@ -1,0 +1,68 @@
++------------------------------------------------+
+|Time of Transition |PID | Old State | New State |
++------------------------------------------------+
+|                 0 |  1 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 10Mb
+ free memory: 90Mb
+ free partitions: 90Mb
+------------------
+
+|                 0 |  1 |     READY |   RUNNING |
+|                10 |  2 |       NEW |     READY |
+
+ memory status at time 10 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): PID 2 using 10Mb
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 20Mb
+ free memory: 80Mb
+ free partitions: 75Mb
+------------------
+
+|                20 |  3 |       NEW |     READY |
+
+ memory status at time 20 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): PID 3 using 10Mb
+Partition 3 (15Mb): PID 2 using 10Mb
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 30Mb
+ free memory: 70Mb
+ free partitions: 50Mb
+------------------
+
+|                30 |  4 |       NEW |     READY |
+
+ memory status at time 30 
+Partition 1 (40Mb): PID 4 using 10Mb
+Partition 2 (25Mb): PID 3 using 10Mb
+Partition 3 (15Mb): PID 2 using 10Mb
+Partition 4 (10Mb): PID 1 using 10Mb
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 40Mb
+ free memory: 60Mb
+ free partitions: 10Mb
+------------------
+
+|                60 |  1 |   RUNNING |TERMINATED |
+|                60 |  2 |     READY |   RUNNING |
+|               120 |  2 |   RUNNING |TERMINATED |
+|               120 |  3 |     READY |   RUNNING |
+|               180 |  3 |   RUNNING |TERMINATED |
+|               180 |  4 |     READY |   RUNNING |
+|               240 |  4 |   RUNNING |TERMINATED |
++------------------------------------------------+

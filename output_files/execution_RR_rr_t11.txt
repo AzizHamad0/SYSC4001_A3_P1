@@ -1,0 +1,106 @@
++------------------------------------------------+
+|Time of Transition |PID | Old State | New State |
++------------------------------------------------+
+|                 0 |  1 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): PID 1 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 18Mb
+ free memory: 82Mb
+ free partitions: 75Mb
+------------------
+
+|                 0 |  2 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): PID 2 using 18Mb
+Partition 2 (25Mb): PID 1 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 36Mb
+ free memory: 64Mb
+ free partitions: 35Mb
+------------------
+
+|                 0 |  2 |     READY |   RUNNING |
+|                90 |  2 |   RUNNING |TERMINATED |
+|                90 |  3 |       NEW |     READY |
+
+ memory status at time 90 
+Partition 1 (40Mb): PID 3 using 18Mb
+Partition 2 (25Mb): PID 1 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+ memory used: 36Mb
+ free memory: 64Mb
+ free partitions: 35Mb
+------------------
+
+|                90 |  3 |     READY |   RUNNING |
+|                99 |  3 |   RUNNING |   WAITING |
+|                99 |  1 |     READY |   RUNNING |
+|               108 |  1 |   RUNNING |   WAITING |
+|               109 |  3 |   WAITING |     READY |
+|               109 |  3 |     READY |   RUNNING |
+|               118 |  3 |   RUNNING |   WAITING |
+|               118 |  1 |   WAITING |     READY |
+|               118 |  1 |     READY |   RUNNING |
+|               127 |  1 |   RUNNING |   WAITING |
+|               128 |  3 |   WAITING |     READY |
+|               128 |  3 |     READY |   RUNNING |
+|               137 |  3 |   RUNNING |   WAITING |
+|               137 |  1 |   WAITING |     READY |
+|               137 |  1 |     READY |   RUNNING |
+|               146 |  1 |   RUNNING |   WAITING |
+|               147 |  3 |   WAITING |     READY |
+|               147 |  3 |     READY |   RUNNING |
+|               156 |  3 |   RUNNING |   WAITING |
+|               156 |  1 |   WAITING |     READY |
+|               156 |  1 |     READY |   RUNNING |
+|               165 |  1 |   RUNNING |   WAITING |
+|               166 |  3 |   WAITING |     READY |
+|               166 |  3 |     READY |   RUNNING |
+|               175 |  3 |   RUNNING |   WAITING |
+|               175 |  1 |   WAITING |     READY |
+|               175 |  1 |     READY |   RUNNING |
+|               184 |  1 |   RUNNING |   WAITING |
+|               185 |  3 |   WAITING |     READY |
+|               185 |  3 |     READY |   RUNNING |
+|               194 |  3 |   RUNNING |   WAITING |
+|               194 |  1 |   WAITING |     READY |
+|               194 |  1 |     READY |   RUNNING |
+|               203 |  1 |   RUNNING |   WAITING |
+|               204 |  3 |   WAITING |     READY |
+|               204 |  3 |     READY |   RUNNING |
+|               213 |  3 |   RUNNING |   WAITING |
+|               213 |  1 |   WAITING |     READY |
+|               213 |  1 |     READY |   RUNNING |
+|               222 |  1 |   RUNNING |   WAITING |
+|               223 |  3 |   WAITING |     READY |
+|               223 |  3 |     READY |   RUNNING |
+|               232 |  3 |   RUNNING |   WAITING |
+|               232 |  1 |   WAITING |     READY |
+|               232 |  1 |     READY |   RUNNING |
+|               241 |  1 |   RUNNING |   WAITING |
+|               242 |  3 |   WAITING |     READY |
+|               242 |  3 |     READY |   RUNNING |
+|               251 |  3 |   RUNNING |   WAITING |
+|               251 |  1 |   WAITING |     READY |
+|               251 |  1 |     READY |   RUNNING |
+|               260 |  1 |   RUNNING |   WAITING |
+|               261 |  3 |   WAITING |     READY |
+|               261 |  3 |     READY |   RUNNING |
+|               270 |  3 |   RUNNING |TERMINATED |
+|               270 |  1 |   WAITING |     READY |
+|               270 |  1 |     READY |   RUNNING |
+|               279 |  1 |   RUNNING |TERMINATED |
++------------------------------------------------+

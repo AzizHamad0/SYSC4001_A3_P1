@@ -1,0 +1,144 @@
++------------------------------------------------+
+|Time of Transition |PID | Old State | New State |
++------------------------------------------------+
+|                 0 |  1 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): PID 1 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+memory used: 18Mb
+free memory: 82Mb
+free partitions: 75Mb
+-------------------
+
+|                 0 |  2 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): PID 2 using 18Mb
+Partition 2 (25Mb): PID 1 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+memory used: 36Mb
+free memory: 64Mb
+free partitions: 35Mb
+-------------------
+
+|                 0 |  1 |     READY |   RUNNING |
+|                 7 |  1 |   RUNNING |   WAITING |
+|                 7 |  2 |     READY |   RUNNING |
+|                17 |  1 |   WAITING |     READY |
+|                18 |  2 |   RUNNING |     READY |
+|                18 |  1 |     READY |   RUNNING |
+|                25 |  1 |   RUNNING |   WAITING |
+|                25 |  2 |     READY |   RUNNING |
+|                35 |  1 |   WAITING |     READY |
+|                36 |  2 |   RUNNING |     READY |
+|                36 |  1 |     READY |   RUNNING |
+|                43 |  1 |   RUNNING |   WAITING |
+|                43 |  2 |     READY |   RUNNING |
+|                53 |  1 |   WAITING |     READY |
+|                54 |  2 |   RUNNING |     READY |
+|                54 |  1 |     READY |   RUNNING |
+|                61 |  1 |   RUNNING |   WAITING |
+|                61 |  2 |     READY |   RUNNING |
+|                71 |  1 |   WAITING |     READY |
+|                72 |  2 |   RUNNING |     READY |
+|                72 |  1 |     READY |   RUNNING |
+|                79 |  1 |   RUNNING |   WAITING |
+|                79 |  2 |     READY |   RUNNING |
+|                89 |  1 |   WAITING |     READY |
+|                90 |  2 |   RUNNING |     READY |
+|                90 |  1 |     READY |   RUNNING |
+|                97 |  1 |   RUNNING |   WAITING |
+|                97 |  2 |     READY |   RUNNING |
+|               107 |  1 |   WAITING |     READY |
+|               108 |  2 |   RUNNING |     READY |
+|               108 |  1 |     READY |   RUNNING |
+|               115 |  1 |   RUNNING |   WAITING |
+|               115 |  2 |     READY |   RUNNING |
+|               119 |  2 |   RUNNING |TERMINATED |
+|               119 |  3 |       NEW |     READY |
+
+ memory status at time 119 
+Partition 1 (40Mb): PID 3 using 18Mb
+Partition 2 (25Mb): PID 1 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+memory used: 36Mb
+free memory: 64Mb
+free partitions: 35Mb
+-------------------
+
+|               119 |  3 |     READY |   RUNNING |
+|               124 |  3 |   RUNNING |   WAITING |
+|               125 |  1 |   WAITING |     READY |
+|               125 |  1 |     READY |   RUNNING |
+|               132 |  1 |   RUNNING |   WAITING |
+|               132 |  3 |   WAITING |     READY |
+|               132 |  3 |     READY |   RUNNING |
+|               137 |  3 |   RUNNING |   WAITING |
+|               142 |  1 |   WAITING |     READY |
+|               142 |  1 |     READY |   RUNNING |
+|               145 |  3 |   WAITING |     READY |
+|               149 |  1 |   RUNNING |   WAITING |
+|               149 |  3 |     READY |   RUNNING |
+|               154 |  3 |   RUNNING |   WAITING |
+|               159 |  1 |   WAITING |     READY |
+|               159 |  1 |     READY |   RUNNING |
+|               162 |  3 |   WAITING |     READY |
+|               166 |  1 |   RUNNING |TERMINATED |
+|               166 |  4 |       NEW |     READY |
+
+ memory status at time 166 
+Partition 1 (40Mb): PID 3 using 18Mb
+Partition 2 (25Mb): PID 4 using 18Mb
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): FREE
+Partition 6 (2Mb): FREE
+memory used: 36Mb
+free memory: 64Mb
+free partitions: 35Mb
+-------------------
+
+|               166 |  3 |     READY |   RUNNING |
+|               171 |  3 |   RUNNING |   WAITING |
+|               171 |  4 |     READY |   RUNNING |
+|               179 |  3 |   WAITING |     READY |
+|               180 |  4 |   RUNNING |     READY |
+|               180 |  3 |     READY |   RUNNING |
+|               185 |  3 |   RUNNING |   WAITING |
+|               185 |  4 |     READY |   RUNNING |
+|               193 |  3 |   WAITING |     READY |
+|               194 |  4 |   RUNNING |     READY |
+|               194 |  3 |     READY |   RUNNING |
+|               199 |  3 |   RUNNING |   WAITING |
+|               199 |  4 |     READY |   RUNNING |
+|               207 |  3 |   WAITING |     READY |
+|               208 |  4 |   RUNNING |     READY |
+|               208 |  3 |     READY |   RUNNING |
+|               213 |  3 |   RUNNING |   WAITING |
+|               213 |  4 |     READY |   RUNNING |
+|               221 |  3 |   WAITING |     READY |
+|               222 |  4 |   RUNNING |     READY |
+|               222 |  3 |     READY |   RUNNING |
+|               227 |  3 |   RUNNING |   WAITING |
+|               227 |  4 |     READY |   RUNNING |
+|               235 |  3 |   WAITING |     READY |
+|               236 |  4 |   RUNNING |     READY |
+|               236 |  3 |     READY |   RUNNING |
+|               241 |  3 |   RUNNING |   WAITING |
+|               241 |  4 |     READY |   RUNNING |
+|               246 |  4 |   RUNNING |TERMINATED |
+|               249 |  3 |   WAITING |     READY |
+|               249 |  3 |     READY |   RUNNING |
+|               254 |  3 |   RUNNING |TERMINATED |
++------------------------------------------------+

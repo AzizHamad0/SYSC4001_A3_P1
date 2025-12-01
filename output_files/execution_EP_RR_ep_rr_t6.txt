@@ -1,0 +1,84 @@
++------------------------------------------------+
+|Time of Transition |PID | Old State | New State |
++------------------------------------------------+
+|                 0 |  1 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): FREE
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 5Mb
+free memory: 95Mb
+free partitions: 92Mb
+-------------------
+
+|                 0 |  2 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): FREE
+Partition 4 (10Mb): PID 2 using 5Mb
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 10Mb
+free memory: 90Mb
+free partitions: 82Mb
+-------------------
+
+|                 0 |  5 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): FREE
+Partition 3 (15Mb): PID 5 using 5Mb
+Partition 4 (10Mb): PID 2 using 5Mb
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 15Mb
+free memory: 85Mb
+free partitions: 67Mb
+-------------------
+
+|                 0 |  6 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): FREE
+Partition 2 (25Mb): PID 6 using 5Mb
+Partition 3 (15Mb): PID 5 using 5Mb
+Partition 4 (10Mb): PID 2 using 5Mb
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 20Mb
+free memory: 80Mb
+free partitions: 42Mb
+-------------------
+
+|                 0 |  9 |       NEW |     READY |
+
+ memory status at time 0 
+Partition 1 (40Mb): PID 9 using 5Mb
+Partition 2 (25Mb): PID 6 using 5Mb
+Partition 3 (15Mb): PID 5 using 5Mb
+Partition 4 (10Mb): PID 2 using 5Mb
+Partition 5 (8Mb): PID 1 using 5Mb
+Partition 6 (2Mb): FREE
+memory used: 25Mb
+free memory: 75Mb
+free partitions: 2Mb
+-------------------
+
+|                 0 |  1 |     READY |   RUNNING |
+|                20 |  1 |   RUNNING |TERMINATED |
+|                20 |  2 |     READY |   RUNNING |
+|                40 |  2 |   RUNNING |TERMINATED |
+|                40 |  5 |     READY |   RUNNING |
+|                60 |  5 |   RUNNING |TERMINATED |
+|                60 |  6 |     READY |   RUNNING |
+|                80 |  6 |   RUNNING |TERMINATED |
+|                80 |  9 |     READY |   RUNNING |
+|               100 |  9 |   RUNNING |TERMINATED |
++------------------------------------------------+
